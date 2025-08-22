@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form-container">
+        <h2>Sign up</h2>
+        <form onsubmit="return handleSubmit()">
+            <div>
+                <label>Full Name</label><br>
+                <input type="text" id="fname" placeholder="First name">
+                <input type="text" id="lname" placeholder="Last name"><br>
+                <span id="errorName"></span>
+            </div>
+            <div>
+                <label for="uname">Username</label><br>
+                <input type="text" id="uname" placeholder="Username"><br>
+                <span id="errorUname"></span>
+            </div>
+            <div>
+                <label for="email">Email</label><br>
+                <input type="text" id="email" placeholder="example@example.com"><br>
+                <span id="errorEmail"></span>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label><br>
+                <input type="tel" id="phone" placeholder="Phone number must be 11 digit"><br>
+                <span id="errorPhone"></span>
+            </div>
+            <div>
+                <label for="gender">Gender</label>
+                <input type="radio" class="gender" name="des"><span class="male">Male</span>
+                <input type="radio" class="gender" name="des"><span class="female">Female</span>
+                <span id="errorGender"></span>
+            </div>
+            <div>
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" placeholder="Select date"><br>
+                <span id="errorDob"></span>
+            </div>
+            <div>
+                <label for="nid">NID Number</label><br>
+                <input type="text" id="nid" placeholder="NID number"><br>
+                <span id="errorNid"></span>
+            </div>
+            <div>
+                <label for="address">Address</label><br>
+                <input type="text" id="address" placeholder="Address"><br>
+                <span id="errorAddress"></span>
+            </div>
+            <div>
+                <label for="createPass">Create Password</label><br>
+                <input type="text" id="createPass" placeholder="Create password"><br>
+                <span id="errorCreatePass"></span>
+            </div>
+            <div>
+                <label for="confirmPass">Confirm Password</label><br>
+                <input type="text" id="confirmPass" placeholder="Confirm password"><br>
+                <span id="errorConfirmPass"></span>
+            </div>
+            <div>
+                <input type="checkbox" id="terms">
+                <span class="term">I agree with <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.</span><br>
+                <span id="errorTerm"></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
