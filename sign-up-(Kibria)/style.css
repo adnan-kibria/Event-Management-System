@@ -1,0 +1,104 @@
+body{
+    background-image: url(../images/festivio.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+div{
+    margin-bottom: 5px;
+}
+#form-container{
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 5px solid gray;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    margin:auto;
+}
+#uname, #email, #phone, #address,
+#zip, #createPass,
+#confirmPass,#nid{
+    width: 350px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#dob{
+    width: 270px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#fname, #lname{
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button{
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    margin-left: 80px;
+    background-color: rgb(128, 57, 219);
+    border-radius: 2px;
+    border:none;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: none;
+    cursor: pointer;
+}
+select{
+    margin-left: 14px;
+    width: 180px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+span{
+    color: red;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#city{
+    width: 150px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+label[for="state"]{
+    margin-left: 146px;
+}
+#errorState{
+    display: flex;
+    margin-left: 46px;
+}
+#chk{
+    margin-top: 5px;
+}
+#errorCity{
+    display: flex;
+}
+#errorCityState{
+    display: flex;
+    flex-direction: row;
+}
+.male,.female,.term{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
