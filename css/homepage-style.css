@@ -1,5 +1,9 @@
 body{
+    margin: 0px;
+    padding: 0px;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
 }
 .nav-bar{
     background-image: linear-gradient(90deg, #DA22FF, #9733EE);
@@ -7,7 +11,8 @@ body{
     align-items: center;
     justify-content: space-between;
     flex-shrink: 0;
-    position: relative;
+    width: 100%;
+    position: fixed;
 }
 .logo{
     margin-left: 50px;
@@ -15,13 +20,76 @@ body{
 .navi-link{
     margin-right: 50px;
 }
-a{
-    text-decoration: none;
-}
 a,span{
+    text-decoration: none;
     color: white;
-    font-weight: 1000;
+    font-weight: bolder;
 }
 .navi-link a:hover{
     text-decoration: underline;
+}
+.hero-sec{
+    background: linear-gradient(rgba(0,0,0,0.5)), url("../images/hero-sec.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading,.join-btn{
+    margin: 50px;
+}
+p{
+    text-align: center;
+}
+.title{
+    font-size: 100px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    color: white;
+}
+.slogan{
+    margin: 0px;
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+.brief{
+    font-size: 20px;
+    font-weight: bold;
+    color: gainsboro;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.join-btn{
+    margin: 0px;
+    padding-bottom: 40px;
+}
+button{
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: lighter;
+    background-color: #9733EE;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+button:hover{
+    background-color: #DA22FF;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    color: white;
+    font-size: 18px;
 }
