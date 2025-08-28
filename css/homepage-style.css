@@ -1,0 +1,27 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav-bar{
+    background-image: linear-gradient(90deg, #DA22FF, #9733EE);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    position: relative;
+}
+.logo{
+    margin-left: 50px;
+}
+.navi-link{
+    margin-right: 50px;
+}
+a{
+    text-decoration: none;
+}
+a,span{
+    color: white;
+    font-weight: 1000;
+}
+.navi-link a:hover{
+    text-decoration: underline;
+}
