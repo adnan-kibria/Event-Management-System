@@ -1,14 +1,14 @@
 body{
-    background-image: url(../images/festivio.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(90deg, #DA22FF, #9733EE);
     background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 h2{
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
     text-align: center;
 }
 div{
@@ -16,32 +16,29 @@ div{
 }
 #form-container{
     background-color: white;
-    margin: 20px;
+    /* margin: 20px; */
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 5px solid gray;
+    box-shadow: 20px 20px 20px solid white;
 }
 label{
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: small;
     margin:auto;
 }
-#uname, #email, #phone, #address,
-#zip, #createPass,
-#confirmPass,#nid{
-    width: 350px;
+#uname, #address{
+    width: 515px;
     height: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 #dob{
-    width: 270px;
     height: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-#fname, #lname{
+#fname, #lname, #email, #phone, #createPass, #confirmPass, #nid{
+    width: 250px;
     height: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -56,7 +53,6 @@ button{
     border:none;
     color: white;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     border-style: none;
     cursor: pointer;
 }
@@ -71,7 +67,6 @@ select{
 span{
     color: red;
     font-size: small;
-    font-family: Arial, Helvetica, sans-serif;
 }
 #city{
     width: 150px;
@@ -79,8 +74,11 @@ span{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-label[for="state"]{
+label[for="state"], [for="phone"], [for="confirmPass"]{
     margin-left: 146px;
+}
+label[for="dob"]{
+    margin-left: 85px;
 }
 #errorState{
     display: flex;
@@ -101,4 +99,11 @@ label[for="state"]{
 }
 a{
     text-decoration: none;
+}
+select{
+    margin: 0px;
+    width: 100px;
+}
+#dob{
+    width: 145px;
 }
