@@ -1,0 +1,6 @@
+#Treat all PHP files in the 'view' folder as HTML
+view/*.php linguist-language=HTML
+#Treat all PHP files as PHP (Default)
+php/*.php linguist-language=PHP
+#Optional: Explicitly mark HTML files
+*.html linguist-language=HTML
