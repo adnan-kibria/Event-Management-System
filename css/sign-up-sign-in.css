@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: linear-gradient(90deg, #FF512F, #DD2476);
+    background-size: cover;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(255,255,255,0.2);
+    width: 800px;
+    max-width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.form-container{
+    width: 50%;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+.form-container h2{
+    margin: 20px;
+    text-align: center;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"]{
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container input:focus{
+    border-color: #FF512F;
+    outline: none;
+}
+.form-container button.submit-btn{
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(90deg, #FF512F, #DD2476);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+} 
+.form-container button.submit-btn:hover{
+    background: linear-gradient(90deg, #DD2476, #FF512F);
+}
+.toggle-container{
+    width: 50%;
+    background: url(../images/toggle-bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 40px;
+}
+.toggle-container h2{
+    margin-bottom: 20px;
+}
+.toggle-container p{
+    margin-bottom: 30px;
+}
+.toggle-container button.switch-btn{
+    padding: 8px 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.toggle-container button.switch-btn:hover{
+    background: white;
+    color: #FF512F;
+}
+.form-container.sign-up{
+    display: none;
+}
+.container.active .form-container.sign-up{
+    display: block;
+}
+.container.active .form-container.sign-in{
+    display: none;
+}
+.forget-password{
+    color: #FF512F;
+    margin-top: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.terms{
+    color: #FF512F;
+    margin-top: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    align-self: flex-start;
+    text-decoration: none;
+    user-select: none;
+}
+a{
+    text-decoration: none;
+    color: #DD2476;
+}
+.error-message{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
