@@ -79,6 +79,7 @@ function validatePassword(){
     return true;
 }
 function validateConfirmPassword(){
+    const password = document.getElementById("password-sign-up").value.trim();
     const confirmPassword = document.getElementById("confirm-password").value.trim();
     const confirmPasswordError = document.getElementById("confirm-password-error");
     confirmPasswordError.innerHTML = "";
@@ -87,7 +88,7 @@ function validateConfirmPassword(){
         confirmPasswordError.innerText = "Confirm Password is required";
         return false;
     }
-    else if(confirmPassword !== validatePassword()){
+    else if(confirmPassword !== password){
         confirmPasswordError.innerHTML = "Passwords do not match";
         return false;
     }
