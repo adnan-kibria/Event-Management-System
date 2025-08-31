@@ -1,4 +1,7 @@
 <?php
+
+    include "festivio-db.php";
+
     if($_SERVER["REQUEST_METHOD"] === "POST"){
         $error = [];
 
@@ -46,9 +49,16 @@
         echo "Submit Successfully!";
 
         if(!empty($error)){
-            header("Location: ../view/sign-up-sign-in.html");
+            header("Location: ../view/sign-up-sign-in.php");
         } else {
-            echo "Submit Successfully!";
+            $sql = "INSET INTO participants (Full_Name,Username,Email,Password) VALUES('$name','$username','$email','$pasword')";
+            if($conn -> query($sql) === TRUE){
+                echo "Sign-Up Successful!";
+            }
+            else{
+                $error = "error".$conn->error;
+            }
+            header("Location: ../view/sign-up-sign-in.php");
         }
     }
 ?>
