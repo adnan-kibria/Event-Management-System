@@ -28,7 +28,7 @@
                 <span id="name-error" class="error-message"></span>
                 <input type="text" id="username" name="username" placeholder="Username">
                 <span id="username-error" class="error-message"></span> 
-                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="text" id="email" name="email" placeholder="Email">
                 <span id="email-error" class="error-message"></span>
                 <input type="password" id="password-sign-up" name="password-sign-up" placeholder="Password">
                 <span id="password-error" class="error-message"></span>
