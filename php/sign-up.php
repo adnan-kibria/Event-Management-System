@@ -49,16 +49,15 @@
         echo "Submit Successfully!";
 
         if(!empty($error)){
-            header("Location: ../view/sign-up-sign-in.php");
+            header("Location: ../view/sign-up-sign-in.html");
         } else {
-            $sql = "INSET INTO participants (Full_Name,Username,Email,Password) VALUES('$name','$username','$email','$pasword')";
+            $sql = "INSET INTO participants (Full_Name, Username, Email, Password) VALUES('$name', '$username', '$email', '$pasword')";
             if($conn -> query($sql) === TRUE){
                 echo "Sign-Up Successful!";
             }
             else{
                 $error = "error".$conn->error;
             }
-            header("Location: ../view/sign-up-sign-in.php");
         }
     }
 ?>
