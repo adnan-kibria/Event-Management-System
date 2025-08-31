@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    display: flex;
+    background: #e7e5e5;
+}
+.side-nav{
+    width: 200px;
+    height: 100vh;
+    background: #FF512F;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.side-nav hr{
+    border: 1px solid white;
+}
+.side-nav h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+ul{
+    list-style: none;
+}
+.side-nav ul li{
+    margin: 20px;
+}
+.side-nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+.side-nav ul li a.active{
+    background: rgba(221, 36, 118, 0.5);
+}
+.side-nav ul li a:hover:not(.active){
+    background: rgba(255, 255, 255, 0.2);
+}
+.main{
+    margin-left: 200px;
+    width: 100%
+}
+.main .top-bar{
+    background: linear-gradient(to right, #DD2476,#FF512F );
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+.main .top-bar .top{
+    display: flex;
+    justify-content: center;
+}
+.main .top-bar .top .search input{
+    background: rgba(255, 255, 255, 0.3);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    width: 400px;
+    color: white;
+    box-shadow: none;
+    outline: none;
+}
+.main .top-bar .top .search input::placeholder{
+    color: white;
+}
+.main .top-bar .top .search button{
+    background: rgb(255, 255, 255);
+    border: none;
+    color: #FF512F;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button{
+    background: white;
+    border: none;
+    color: #FF512F;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover{
+    background: rgba(221, 36, 118, 0.5);
+    color: white;
+}
+.main .top-bar .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.main .top-bar .bottom .user-intro{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+}
+.main .top-bar .bottom .user-intro img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.main .top-bar .bottom .user-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.main .top-bar .bottom .user-info .wrap .profile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 8px;
+    width: 150px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+.main .top-bar .bottom .user-info .wrap .profile img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
