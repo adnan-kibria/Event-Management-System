@@ -1,6 +1,6 @@
 <?php
 
-    include "festivio-db.php";
+    include "../db/festivio-db.php";
     if($_SERVER["REQUEST_METHOD"] === "POST"){
         $name = trim($_POST['name'] ?? '');
         $username = trim($_POST['username'] ?? '');
