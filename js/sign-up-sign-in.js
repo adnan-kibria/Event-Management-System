@@ -107,14 +107,14 @@ function validateTerms(){
 }
 
 document.getElementById("sign_up").addEventListener("submit", function(event){
-    event.preventDefault();
+    // event.preventDefault();
     if(!validateName() && !validateUsername() && !validateEmail() && !validatePassword() && !validateConfirmPassword() && !validateTerms() && !validateTerms()){
-        return false;
+        event.preventDefault(); 
     }
-    else if(!validateName() || !validateUsername() || !validateEmail() || !validatePassword() || !validateConfirmPassword() || !validateTerms() || !validateTerms()){
-        return false;
+    if(!validateName() || !validateUsername() || !validateEmail() || !validatePassword() || !validateConfirmPassword() || !validateTerms() || !validateTerms()){
+        event.preventDefault();
     }
-    return true;
+    // return true;
 });
 
 function validateUsernameEmail(){
@@ -144,12 +144,12 @@ function validateSignInPassword(){
     return true;
 }
 document.getElementById("sign_in").addEventListener("submit", function(event){
-    event.preventDefault();
+    // event.preventDefault();
     if(!validateUsernameEmail() && !validateSignInPassword()){
-        return false;
+        event.preventDefault();
     }
-    else if(!validateUsernameEmail() || !validateSignInPassword()){
-        return false;
+    if(!validateUsernameEmail() || !validateSignInPassword()){
+        event.preventDefault();
     }
-    return true;
+    // return true;
 });
