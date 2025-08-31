@@ -47,6 +47,7 @@
             <button class="switch-btn" id="switch-to-sign-up">Sign Up</button>
         </div>
     </div>
+    <!-- <?php include "sign-up.php"?> -->
     <script src="../js/sign-up-sign-in.js"></script>
 </body>
 </html>
