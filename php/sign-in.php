@@ -1,20 +1,29 @@
 <?php
-    if($_SERVER["REQUEST_METHOD"] === "POST"){
-        $error = [];
+    session_start();
 
-        $email_username = trim($_POST['email-username'] ?? '');
-        $password = trim($_POST['password-sign-in'] ?? '');
-        if($email_username === ""){
-            $error['email-username'] = "Email or Username is required.";
-        }
-        if($password === ""){
-            $error['password'] = "Password is required.";
-        }
+    include "../db/festivio-db.php";
 
-        if(!empty($error)){
-            header("Location: ../view/sign-up-sign-in.html");
-        } else {
-            echo "Submit Successfully!";
+    if($_SERVER["REQUEST METHOD"] === "POST"){
+        $email_username = $_POST["email-username"];
+        $password = $_POST["password-sign-in"];
+
+        if(empty($email_username) || empty($password)){
+            die("Email or Username and Password is Required");
+        }
+        else{
+            $sql = "SELECT * FROM admin WHERE (email = ? OR username = ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ss", $email_username, $email_username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if($result->num_rows === 1){
+                $user = $result->fetch_assoc();
+                if(password_verify($password, $user["password"])){
+                    
+                }
+            }
         }
     }
+
 ?>
