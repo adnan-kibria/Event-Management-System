@@ -51,15 +51,15 @@
         <div class="contents">
             <div class="content">
                 <h2>Total User</h2>
-                <p>0</p>
+                <p id="total-users">0</p>
             </div>
             <div class="content">
                 <h2>Total Events</h2>
-                <p>0</p>
+                <p id="total-events">0</p>
             </div>
             <div class="content">
                 <h2>Total Registration</h2>
-                <p>0</p>
+                <p id="total-registrations">0</p>
             </div>
         </div>
         <div class="announce">
