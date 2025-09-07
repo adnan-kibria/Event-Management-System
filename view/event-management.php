@@ -21,16 +21,22 @@
 </head>
 <body>
     <div class="side-nav">
-        <h2>Announcement</h2>
-        <hr>
-        <ul>
-            <li><a href="./admin-dashboard.php">Home</a></li>
-            <li><a href="./user-management.php">User Management</a></li>
-            <li><a class="active" href="./event-management.php">Event Management</a></li>
-            <li><a href="./reg-management.php">Ticket Management</a></li>
-            <li><a href="./event-report.php">Event Report</a></li>
-            <li><a class="active" href="./announcement.php">Announcement</a></li>
-        </ul>
+        <div class="top-section">
+            <h2>Announcement</h2>
+            <hr>
+            <ul>
+                <li><a href="./admin-dashboard.php">Home</a></li>
+                <li><a href="./user-management.php">User Management</a></li>
+                <li><a class="active" href="./event-management.php">Event Management</a></li>
+                <li><a href="./reg-management.php">Ticket Management</a></li>
+                <li><a href="./event-report.php">Event Report</a></li>
+                <li><a href="./announcement.php">Announcement</a></li>
+            </ul>
+        </div>
+        <div class="bottom-section">
+            <hr>
+            <button onclick="location.href='../php/logout.php'">Logout</button>
+        </div>
     </div>
     <div class="main">
         <div class="top-bar">
