@@ -37,7 +37,7 @@
         </div>
         <div class="bottom-section">
             <hr>
-            <button onclick="location.href='../php/logout.php'">Logout</button>
+            <button onclick="location.href='../php/sign-out.php'">Logout</button>
         </div>
     </div>
     <div class="main">
