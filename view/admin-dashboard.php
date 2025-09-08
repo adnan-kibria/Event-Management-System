@@ -5,11 +5,6 @@
         header("Location: ../view/sign-up-sign-in.php");
         exit();
     }
-
-    if($_SESSION["role"] !== "admin"){
-        header("Location: ../view/participant-dashboard.php");
-        exit();
-    }
 ?>
 
 <!DOCTYPE html>
