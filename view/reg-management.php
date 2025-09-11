@@ -16,13 +16,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcement</title>
+    <title>Registration Management</title>
     <link rel="stylesheet" href="../css/across-style.css">
 </head>
 <body>
     <div class="side-nav">
         <div class="top-section">
-            <h2>Announcement</h2>
+            <h2>Registration Management</h2>
             <hr>
             <ul>
                 <li><a href="./admin-dashboard.php">Home</a></li>
