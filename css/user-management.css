@@ -17,8 +17,8 @@
     background-color: whitesmoke;
     padding: 10px;
     border-radius: 5px;
-    height: 370px;
-    overflow-y: auto;
+    height: 335px;
+    overflow: auto;
 }
 .main .main-content table{
     width: 100%;
