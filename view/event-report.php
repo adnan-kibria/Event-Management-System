@@ -27,7 +27,7 @@
             <ul>
                 <li><a href="./admin-dashboard.php">Home</a></li>
                 <li><a href="./user-management.php">User Management</a></li>
-                <li><a class="active" href="./event-management.php">Event Management</a></li>
+                <li><a href="./event-management.php">Event Management</a></li>
                 <li><a href="./reg-management.php">Registration Management</a></li>
                 <li><a class="active" href="./event-report.php">Event Report</a></li>
                 <li><a href="./announcement.php">Announcement</a></li>
