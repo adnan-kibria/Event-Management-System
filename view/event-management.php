@@ -72,12 +72,12 @@
                     <table id="event-table">
                         <thead>
                             <tr>
-                                <th rowspan="2">ID</th>
-                                <th rowspan="2">Event Name</th>
+                                <th>ID</th>
+                                <th>Event Title</th>
                                 <th>Start Date</th>
                                 <th>End Date</th>
                                 <th>Status</th>
-                                <th rowspan="2">Actions</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id="event-data">                        
