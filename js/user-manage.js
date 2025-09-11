@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     const user_data = document.getElementById("user-data");
     const modal = document.querySelector(".modal");
-    const user_details = document.getElementById("details-container");
-    
 
     fetchUserData();
 
