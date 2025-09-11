@@ -1,9 +1,9 @@
 <?php
     include "../db/festivio-db.php";
 
-    if(isset($_POST['id'])){
-        $eventID = $_POST['id'];
-        $sql = "DELETE FROM events WHERE id = ?";
+    if(isset($_POST['event-id'])){
+        $eventID = $_POST['event-id'];
+        $sql = "DELETE FROM events WHERE event_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $eventID);
         $result = $stmt->execute();
