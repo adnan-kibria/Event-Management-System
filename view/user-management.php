@@ -73,11 +73,11 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th colspan="5">Name</th>
-                        <th colspan="3">Username</th>
-                        <th colspan="10">Email</th>
-                        <th colspan="10">Phone</th>
-                        <th colspan="2">View</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>View</th>
                         <!-- <th>Actions</th> -->
                     </tr>
                 </thead>

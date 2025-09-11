@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
                                         <td>${user.username}</td>
                                         <td>${user.email}</td>
                                         <td>${user.phone}</td>
-                                        <td>
+                                        <td class="view-btn">
                                             <button>View</button>
                                         </td>`;
                         user_data.appendChild(row);
