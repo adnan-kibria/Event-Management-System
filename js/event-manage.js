@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", function(){
         xhr.send();
     }
 
-    add_event_btn.addEventListener("click", function(e){
+    add_event_btn.addEventListener("click", function(){
         modal_one.style.display = "flex";
     });
 
-    close_add_event.addEventListener("click", function(e){
+    close_add_event.addEventListener("click", function(){
         modal_one.style.display = "none";
     });
 
@@ -60,10 +60,12 @@ document.addEventListener("DOMContentLoaded", function(){
         detailContent.innerHTML = `
             <h2>Event Details</h2>
             <hr>
+            <label for="event-id"><strong>Event ID</strong></label><br>
+            <input type="text" id="event-id" value="${event.event_id}" disabled><br>
             <label for="event-title"><strong>Event Title</strong></label><br>
             <input type="text" id="event-title" value="${event.event_title}"><br>
-            <label for="event-description"><strong>Description</strong></label><br>
-            <textarea id="event-description" rows="10" cols="66" disabled>${event.event_description}</textarea><br>
+            <label for="description"><strong>Description</strong></label><br>
+            <textarea id="event-description" rows="10" cols="66">${event.event_description}</textarea><br>
             <label for="start-date"><strong>Start Date</strong></label>
             <label for="end-date"><strong>End Date</strong></label><br>
             <input type="date" id="start-date" value="${event.start_date}">
@@ -83,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function(){
             <input type="number" id="capacityy" value="${event.capacity}">
             <select id="statuss">
                 <option value="Ongoing" ${event.status === "Ongoing" ? "selected" : ""}>Ongoing</option>
-                <option value="Completed" ${event.status === "Closed" ? "selected" : ""}>Closed</option>
+                <option value="Completed" ${event.status === "Completed" ? "selected" : ""}>Completed</option>
             </select><br>
             <button id="update-btn" class="update-btn">Update</button>
             <button id="delete-btn" class="delete-btn">Delete</button>
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     }
                 }
             };
-            xhr.send("id=" + eventID + "&" + new URLSearchParams(updatedData).toString());
+            xhr.send("event-id=" + eventID + "&" + new URLSearchParams(updatedData).toString());
         }
 
         function deleteEvent(eventID, row){
@@ -122,19 +124,19 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             }
         };
-        xhr.send("id=" + eventID);
+        xhr.send("event-id=" + eventID);
     }
 
         const updateBtn = document.getElementById("update-btn");
         updateBtn.addEventListener("click", () =>{
             var updatedData = {
-                title: document.getElementById("title").value,
-                date: document.getElementById("date").value,
-                time: document.getElementById("time").value,
-                venue: document.getElementById("venue").value,
-                category: document.getElementById("categoryy").value,
-                capacity: document.getElementById("capacityy").value,
-                status: document.getElementById("statuss").value
+                'event-title': document.getElementById("event-title").value,
+                'event-description': document.getElementById("event-description").value,
+                'start-date': document.getElementById("start-date").value,
+                'end-date': document.getElementById("end-date").value,
+                'category': document.getElementById("category").value,
+                'capacity': document.getElementById("capacity").value,
+                'status': document.getElementById("status").value
             };
             updateEvent(eventID, updatedData);
         });
@@ -151,7 +153,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
         modal_two.style.display = "flex";
     }
-
-    
 
 });
