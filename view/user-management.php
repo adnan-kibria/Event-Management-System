@@ -16,13 +16,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcement</title>
+    <title>User Management</title>
     <link rel="stylesheet" href="../css/across-style.css">
+    <link rel="stylesheet" href="../css/user-management.css">
 </head>
 <body>
     <div class="side-nav">
         <div class="top-section">
-            <h2>Announcement</h2>
+            <h2>User Management</h2>
             <hr>
             <ul>
                 <li><a href="./admin-dashboard.php">Home</a></li>
@@ -65,6 +66,27 @@
                 </div>
             </div>
         </div>
+        <div class="main-content">
+            <h2>Participant</h2>
+            <hr>
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th colspan="5">Name</th>
+                        <th colspan="3">Username</th>
+                        <th colspan="10">Email</th>
+                        <th colspan="10">Phone</th>
+                        <th colspan="2">View</th>
+                        <!-- <th>Actions</th> -->
+                    </tr>
+                </thead>
+                <tbody id="user-data">
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
+    <script src="../js/user-manage.js"></script>
 </body>
 </html>
