@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 var response = JSON.parse(xhr.responseText);
                 if(response.success){
                     row.remove();
+                    location.reload();
                 } else {
                     alert("Error deleting user.");
                 }

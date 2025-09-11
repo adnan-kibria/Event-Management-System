@@ -1,157 +1,151 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const event_data = document.getElementById("event-data");
-    const add_event_btn = document.getElementById("add-event-btn");
-    const close_add_event = document.getElementById("close-add-modal");
-    const modal_one = document.querySelector(".modal-one");
-    const modal_two = document.querySelector(".modal-two");
+document.addEventListener("DOMContentLoaded", () => {
+    const eventData = document.getElementById("event-data");
+    const addEventBtn = document.getElementById("add-event-btn");
+    const closeAddEvent = document.getElementById("close-add-modal");
+    const modalOne = document.querySelector(".modal-one");
+    const modalTwo = document.querySelector(".modal-two");
+    const detailContent = document.getElementById("detail-content-two");
 
-    fetchUserData();
-
-    function fetchUserData(){
+    // === Load Events ===
+    function fetchEvents() {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "../php/event-manage.php", true);
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState === 4 && xhr.status === 200){
-                try{
-                    var data = JSON.parse(xhr.responseText);
-                    event_data.innerHTML = "";
-                    data.forEach(function(event){
-                        var row = document.createElement("tr");
-                        row.dataset.user = JSON.stringify(event);
-                        row.innerHTML = `<td>${event.event_id}</td>
-                                        <td>${event.event_title}</td>
-                                        <td>${event.start_date}</td>
-                                        <td>${event.end_date}</td>
-                                        <td>${event.status}</td>
-                                        <td class="btn">
-                                            <button class="view-btn">View</button>
-                                        </td>`;
-                        event_data.appendChild(row);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                try {
+                    const data = JSON.parse(xhr.responseText);
+                    eventData.innerHTML = "";
+                    data.forEach(event => {
+                        const row = document.createElement("tr");
+                        row.dataset.event = JSON.stringify(event);
+                        row.innerHTML = `
+                            <td>${event.event_id}</td>
+                            <td>${event.event_title}</td>
+                            <td>${event.start_date}</td>
+                            <td>${event.end_date}</td>
+                            <td>${event.status}</td>
+                            <td><button class="view-btn">View</button></td>
+                        `;
+                        eventData.appendChild(row);
                     });
-                } catch(e){
-                    console.error("Error parsing JSON:", e);
+                } catch (e) {
+                    console.error("Invalid JSON:", e);
                 }
             }
         };
         xhr.send();
     }
+    fetchEvents();
 
-    add_event_btn.addEventListener("click", function(e){
-        modal_one.style.display = "flex";
+    // === Show Add Event Modal ===
+    addEventBtn.addEventListener("click", () => modalOne.style.display = "flex");
+    closeAddEvent.addEventListener("click", () => modalOne.style.display = "none");
+
+    // === Handle View Click ===
+    eventData.addEventListener("click", e => {
+        if (!e.target.classList.contains("view-btn")) return;
+        const row = e.target.closest("tr");
+        const event = JSON.parse(row.dataset.event);
+        showEventDetails(event, row);
     });
 
-    close_add_event.addEventListener("click", function(e){
-        modal_one.style.display = "none";
-    });
-
-
-    event_data.addEventListener("click", function(e){
-        if(e.target.classList.contains("view-btn")){
-            const row = e.target.closest("tr");
-            const event = JSON.parse(row.dataset.user);
-            displayEventDetails(event, row);
-        }
-    });
-
-
-    function displayEventDetails(event, row){
-        const eventID = event.event_id;
-        const detailContent = document.getElementById("detail-content-two");
+    // === Show Event Details ===
+    function showEventDetails(event, row) {
         detailContent.innerHTML = `
-            <h2>Event Details</h2>
-            <hr>
-            <label for="event-title"><strong>Event Title</strong></label><br>
+            <h2>Event Details</h2><hr>
+            <label><strong>Title</strong></label><br>
             <input type="text" id="event-title" value="${event.event_title}"><br>
-            <label for="event-description"><strong>Description</strong></label><br>
-            <textarea id="event-description" rows="10" cols="66" disabled>${event.event_description}</textarea><br>
-            <label for="start-date"><strong>Start Date</strong></label>
-            <label for="end-date"><strong>End Date</strong></label><br>
+
+            <label><strong>Description</strong></label><br>
+            <textarea id="event-description" rows="5" cols="40">${event.event_description}</textarea><br>
+
+            <label><strong>Start Date</strong></label>
             <input type="date" id="start-date" value="${event.start_date}">
+
+            <label><strong>End Date</strong></label>
             <input type="date" id="end-date" value="${event.end_date}"><br>
-            <label for="venue"><strong>Venue</strong></label><br>
+
+            <label><strong>Venue</strong></label><br>
             <input type="text" id="venue" value="${event.venue}"><br>
-            <label for="categoryy"><strong>Category</strong></label>
-            <label for="capacityy"><strong>Capacity</strong></label>
-            <label for="statuss"><strong>Status</strong></label><br>
-            <select id="categoryy">
+
+            <label><strong>Category</strong></label>
+            <select id="category">
                 <option value="Music" ${event.category === "Music" ? "selected" : ""}>Music</option>
                 <option value="Art" ${event.category === "Art" ? "selected" : ""}>Art</option>
                 <option value="Technology" ${event.category === "Technology" ? "selected" : ""}>Technology</option>
                 <option value="Sports" ${event.category === "Sports" ? "selected" : ""}>Sports</option>
                 <option value="Education" ${event.category === "Education" ? "selected" : ""}>Education</option>
             </select>
-            <input type="number" id="capacityy" value="${event.capacity}">
-            <select id="statuss">
-                <option value="Ongoing" ${event.status === "Ongoing" ? "selected" : ""}>Ongoing</option>
-                <option value="Completed" ${event.status === "Closed" ? "selected" : ""}>Closed</option>
-            </select><br>
-            <button id="update-btn" class="update-btn">Update</button>
-            <button id="delete-btn" class="delete-btn">Delete</button>
-            <button id="close-btn" class="close-btn">Close</button>`;
 
-        function updateEvent(eventID, updatedData){
+            <label><strong>Capacity</strong></label>
+            <input type="number" id="capacity" value="${event.capacity}">
+
+            <label><strong>Status</strong></label>
+            <select id="status">
+                <option value="Ongoing" ${event.status === "Ongoing" ? "selected" : ""}>Ongoing</option>
+                <option value="Closed" ${event.status === "Closed" ? "selected" : ""}>Closed</option>
+            </select><br>
+
+            <button id="update-btn">Update</button>
+            <button id="delete-btn">Delete</button>
+            <button id="close-btn">Close</button>
+        `;
+
+        // === Update Event ===
+        document.getElementById("update-btn").onclick = function () {
+            const updated = {
+                title: document.getElementById("event-title").value,
+                description: document.getElementById("event-description").value,
+                start_date: document.getElementById("start-date").value,
+                end_date: document.getElementById("end-date").value,
+                venue: document.getElementById("venue").value,
+                category: document.getElementById("category").value,
+                capacity: document.getElementById("capacity").value,
+                status: document.getElementById("status").value
+            };
+
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "../php/update-event.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState === 4 && xhr.status === 200){
-                    var response = JSON.parse(xhr.responseText);
-                    if(response.success){
-                        fetchUserData();
-                        modal_two.style.display = "none";
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const res = JSON.parse(xhr.responseText);
+                    if (res.success) {
+                        fetchEvents();
+                        modalTwo.style.display = "none";
                     } else {
-                        alert("Error updating user.");
+                        alert("Update failed");
                     }
                 }
             };
-            xhr.send("id=" + eventID + "&" + new URLSearchParams(updatedData).toString());
-        }
-
-        function deleteEvent(eventID, row){
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "../php/delete-event.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState === 4 && xhr.status === 200){
-                var response = JSON.parse(xhr.responseText);
-                if(response.success){
-                    row.remove();
-                    modal_two.style.display = "none";
-                } else {
-                    alert("Error deleting user.");
-                }
-            }
+            xhr.send("id=" + event.event_id + "&" + new URLSearchParams(updated).toString());
         };
-        xhr.send("id=" + eventID);
-    }
 
-        const updateBtn = document.getElementById("update-btn");
-        updateBtn.addEventListener("click", () =>{
-            var updatedData = {
-                title: document.getElementById("title").value,
-                date: document.getElementById("date").value,
-                time: document.getElementById("time").value,
-                venue: document.getElementById("venue").value,
-                category: document.getElementById("categoryy").value,
-                capacity: document.getElementById("capacityy").value,
-                status: document.getElementById("statuss").value
+        // === Delete Event ===
+        document.getElementById("delete-btn").onclick = function () {
+            if (!confirm("Delete this event?")) return;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "../php/delete-event.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const res = JSON.parse(xhr.responseText);
+                    if (res.success) {
+                        row.remove();
+                        modalTwo.style.display = "none";
+                    } else {
+                        alert("Delete failed");
+                    }
+                }
             };
-            updateEvent(eventID, updatedData);
-        });
-        const deleteBtn = document.getElementById("delete-btn");
-        deleteBtn.addEventListener("click", () =>{
-            if(confirm("Are you sure you want to delete this event?")){
-                deleteEvent(eventID, row);
-            }
-        });
-        const closeBtn = document.getElementById("close-btn");
-        closeBtn.addEventListener("click", () =>{
-            modal_two.style.display = "none";
-        });
+            xhr.send("id=" + event.event_id);
+        };
 
-        modal_two.style.display = "flex";
+        // === Close Modal ===
+        document.getElementById("close-btn").onclick = function () {
+            modalTwo.style.display = "none";
+        };
+
+        modalTwo.style.display = "flex";
     }
-
-    
-
 });
