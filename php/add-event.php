@@ -9,6 +9,9 @@
         $venue = trim($_POST['venue'] ?? '');
         $category = trim($_POST['category'] ?? '');
         $capacity = trim($_POST['capacity'] ?? '');
+        $status = trim($_POST['status'] ?? '');
+
+        $status = "ongoing";
 
         if(empty($event_title) || empty($description) || empty($start_date) || empty($end_date) || empty($venue) || empty($category) || empty($capacity)){
             echo "Fill up the form correctly!";
@@ -20,7 +23,6 @@
             echo "Start date cannot be later than end date.";
         }
         else{
-            $status = "ongoing";
             $sql = "INSERT INTO events (event_title, event_description, start_date, end_date, venue, category, capacity, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sssssssi", $event_title, $description, $start_date, $end_date, $venue, $category, $capacity, $status);

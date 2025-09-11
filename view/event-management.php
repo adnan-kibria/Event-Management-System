@@ -73,7 +73,7 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Event Title</th>
+                                <th>Event</th>
                                 <th>Start Date</th>
                                 <th>End Date</th>
                                 <th>Status</th>
