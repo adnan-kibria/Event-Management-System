@@ -26,7 +26,7 @@
                 <li><a href="./user-management.php">User Management</a></li>
                 <li><a href="./event-management.php">Event Management</a></li>
                 <li><a href="./reg-management.php">Registration Management</a></li>
-                <li><a href="./event-report.php">Event Report</a></li>
+                <!-- <li><a href="./event-report.php">Event Report</a></li> -->
                 <li><a href="./announcement.php">Announcement</a></li>
             </ul>
         </div>
@@ -79,18 +79,6 @@
             <h2>Announcements</h2>
             <hr>
             <div class="announce-list">
-                <div class="announce-item">
-                    <h3>New Event Added</h3>
-                    <p>A new event "Tech Conference 2024" has been added.</p>
-                </div>
-                <div class="announce-item">
-                    <h3>System Maintenance</h3>
-                    <p>Scheduled maintenance on 15th March from 2 AM to 4 AM.</p>
-                </div>
-                <div class="announce-item">
-                    <h3>User Feedback</h3>
-                    <p>We value your feedback! Please fill out the survey.</p>
-                </div>
 
             </div>
         </div>
