@@ -6,7 +6,6 @@
 }
 .main .main-content h2{
     color: #FF512F;
-    margin-top: 10px;
 }
 .main .main-content hr{
     margin-top: 20px;
@@ -88,7 +87,7 @@ label[for="user-phone"]{
 label[for="user-dob"]{
     margin-left: 218px;
 }
-input{
+.main-content input{
     width: 49%;
     padding: 10px;
     margin-top: 10px;

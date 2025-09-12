@@ -25,7 +25,7 @@
                 <li><a class="active" href="./user-management.php">User Management</a></li>
                 <li><a href="./event-management.php">Event Management</a></li>
                 <li><a href="./reg-management.php">Registration Management</a></li>
-                <li><a href="./event-report.php">Event Report</a></li>
+                <!-- <li><a href="./event-report.php">Event Report</a></li> -->
                 <li><a href="./announcement.php">Announcement</a></li>
             </ul>
         </div>
@@ -39,7 +39,6 @@
             <div class="top">
                 <div class="search">
                     <input type="text" placeholder="Search...">
-                    <button>Search</button>
                 </div> 
             </div>
             <div class="bottom">
@@ -51,12 +50,11 @@
                     </div>
                 </div>
                 <div class="user-info">
-                    <button>Inbox</button>
                     <div class="wrap">
-                        <div class="profile">
+                        <a href="../view/admin-profile.php"><div class="profile">
                             <img src="../images/admin-dp.jpg" alt="admin-dp">
                             <span><?php echo $_SESSION["name"]; ?></span>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,7 @@
                     <label for="remember-me">Remember Me</label>
                 </div>
                 <div class="forget-password">
-                    <a href="#">Forgot Password?</a>
+                    <a href="./forget-pass.php">Forgot Password?</a>
                 </div>
                 <button type="submit" id="sign-in-btn" class="submit-btn" name="sign-in">Sign In</button>
             </form>

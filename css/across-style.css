@@ -138,9 +138,19 @@ button:hover{
     gap: 10px;
     align-items: center;
     cursor: pointer;
+    background:white;
+    padding: 8px;
+    border-radius: 10px;
+    color: #FF512F;
+    font-weight: bold;
+}
+.main .top-bar .bottom .user-info .wrap .profile:hover{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
     background: rgba(255, 255, 255, 0.3);
     padding: 8px;
-    width: 150px;
     border-radius: 10px;
     color: white;
     font-weight: bold;
@@ -149,4 +159,7 @@ button:hover{
     width: 30px;
     height: 30px;
     border-radius: 50%;
+}
+a{
+    text-decoration: none;
 }
