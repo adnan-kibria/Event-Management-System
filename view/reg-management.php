@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Management</title>
     <link rel="stylesheet" href="../css/across-style.css">
+    <link rel="stylesheet" href="../css/reg.css">
 </head>
 <body>
     <div class="side-nav">
@@ -65,6 +66,29 @@
                 </div>
             </div>
         </div>
+        <div class="main-content">
+            <div class="fixed-content">
+                <h2>Registration Management</h2>
+                <hr>
+                <div class="table-container">
+                    <table id="reg-table">
+                        <thead>
+                            <tr>
+                                <th>Registration ID</th>
+                                <th>Event ID</th>
+                                <th>Participant ID</th>
+                                <th>Registration Date</th>
+                                <th>Status</th>
+                                <th colspan="2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reg-data">                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="../js/reg.js"></script>
 </body>
 </html>
