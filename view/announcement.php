@@ -39,7 +39,6 @@
             <div class="top">
                 <div class="search">
                     <input type="text" placeholder="Search...">
-                    <button>Search</button>
                 </div> 
             </div>
             <div class="bottom">
@@ -51,12 +50,11 @@
                     </div>
                 </div>
                 <div class="user-info">
-                    <button>Inbox</button>
                     <div class="wrap">
-                        <div class="profile">
+                        <a href="../view/admin-profile.php"><div class="profile">
                             <img src="../images/admin-dp.jpg" alt="admin-dp">
                             <span><?php echo $_SESSION["name"]; ?></span>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
             </div>

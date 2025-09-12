@@ -12,17 +12,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="../css/across-style.css">
     <link rel="stylesheet" href="../css/admin-dashboard.css">
 </head>
 <body>
     <div class="side-nav">
         <div class="top-section">
-            <h2>Dashboard</h2>
+            <h2>Profile</h2>
             <hr>
             <ul>
-                <li><a class="active" href="./admin-dashboard.php">Home</a></li>
+                <li><a href="./admin-dashboard.php">Home</a></li>
                 <li><a href="./user-management.php">User Management</a></li>
                 <li><a href="./event-management.php">Event Management</a></li>
                 <li><a href="./reg-management.php">Registration Management</a></li>
@@ -61,41 +61,9 @@
         </div>
        </div>
        <div class="main-content">
-        <div class="contents">
-            <div class="content">
-                <h2>Total User</h2>
-                <p id="total-users"></p>
-            </div>
-            <div class="content">
-                <h2>Total Events</h2>
-                <p id="total-events"></p>
-            </div>
-            <div class="content">
-                <h2>Total Registration</h2>
-                <p id="total-registrations"></p>
-            </div>
-        </div>
-        <div class="announce">
-            <h2>Announcements</h2>
-            <hr>
-            <div class="announce-list">
-                <div class="announce-item">
-                    <h3>New Event Added</h3>
-                    <p>A new event "Tech Conference 2024" has been added.</p>
-                </div>
-                <div class="announce-item">
-                    <h3>System Maintenance</h3>
-                    <p>Scheduled maintenance on 15th March from 2 AM to 4 AM.</p>
-                </div>
-                <div class="announce-item">
-                    <h3>User Feedback</h3>
-                    <p>We value your feedback! Please fill out the survey.</p>
-                </div>
-
-            </div>
-        </div>
+        
        </div>
     </div>
-    <script src="../js/admin-dashboard.js"></script>
+    <script src="../js/admin-profile.js"></script>
 </body>
 </html>
