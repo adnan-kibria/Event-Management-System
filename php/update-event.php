@@ -12,7 +12,7 @@
         $capacity = $_POST['capacity'];
         $status = $_POST['status'];
 
-        $sql = "UPDATE events SET event_title = ?, event_description = ?, start_date = ?, end_date = ?, venue = ?, category = ?, capacity = ?, status = ? WHERE id = ?";
+        $sql = "UPDATE events SET event_title = ?, event_description = ?, start_date = ?, end_date = ?, venue = ?, category = ?, capacity = ?, status = ? WHERE event_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssssssssi", $eventTitle, $eventDescription, $startDate, $endDate, $venue, $category, $capacity, $status, $eventID);
         $result = $stmt->execute();
