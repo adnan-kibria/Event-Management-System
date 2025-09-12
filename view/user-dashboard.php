@@ -14,8 +14,8 @@
         <div class = "nav-links">
             <a href="./user-dashboard.php" class="active">Home</a>
             <a href="./browse-events.php">Browse Events</a>
-            <a href="./registere-events.php">Registere Events</a>
-            <a href=",/profile.php">Profile</a>
+            <a href="./register-events.php">Registere Events</a>
+            <a href="./profile.php">Profile</a>
         </div>
         <div class="user-info">
              <button onclick="location.href='../php/sign-out.php'" class="button">Logout</button>
@@ -30,9 +30,7 @@
                     and enjoy different types of festivals and concerts from various cultures
                 </p>
             </div>
-            <div class = "join-btn">
-                <a href="./sign-up-sign-in.php"><button>Join Now</button></a>
-            </div>
+            
          </div>
     
 

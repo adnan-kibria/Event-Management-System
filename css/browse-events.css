@@ -1,0 +1,81 @@
+.page-content {
+    max-width: auto;
+    margin: 20px auto 50px auto;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.page-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FF512F;
+}
+
+.page-content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.page-content th {
+    background: linear-gradient(90deg, #FF512F, #DD2476);
+    color: #fff;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.page-content td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #222;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+
+.page-content tr:nth-child(even) td {
+    background: #fafafa;
+}
+
+.page-content tr:hover td {
+    background: #ffe9e2;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .page-content table {
+        font-size: 14px;
+    }
+    .page-content th,
+    .page-content td {
+        padding: 10px;
+    }
+}
+.page-content table .register-button {
+    background: #FF512F;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+.page-content table .register-button:hover {
+    background: #DD2476;
+    transition: background 0.3s ease;
+}
+.page-content .register-button{
+    background: #FF512F;
+    color: #fff;
+}
