@@ -1,0 +1,156 @@
+.main .main-content{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .main-content h2{
+    color: #FF512F;
+    margin-top: 10px;
+}
+.main .main-content button{
+    background-color: #FF512F;
+    color: white;
+    width: 200px;
+    height: auto; 
+    margin-top: 10px;
+}
+.main .main-content hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #FF512F;
+}
+.main .main-content .table-container{
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    height: 335px;
+    overflow: auto;
+}
+.main .main-content table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+.main .main-content table thead{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.main .main-content table th,
+.main .main-content table td{
+    padding: 12px 15px;
+    border: 1px solid #FF512F;
+}
+.main .main-content table th{
+    background-color: #FF512F;
+    color: white;
+    font-weight: bolder;
+}
+.main .main-content table tr:hover{
+    background-color: rgba(255, 81, 47, 0.3);
+}
+.main .main-content table tr .btn{
+    text-align: center;
+}
+.main .main-content table tr td button{
+    background-color: #FF512F;
+    color: white;
+    width: 80px;
+    height: auto; 
+}
+.main .main-content table tr td button:hover{
+    background-color: #DD2476;
+    cursor: pointer;
+}
+.modal-one, .modal-two{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.modal-content-one, .modal-content-two{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 600px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: auto;
+}
+label[for="end-date"]{
+    margin-left: 170px;
+}
+label[for="capacity"]{
+    margin-left: 190px;
+}
+#event-title,#venue{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: medium;
+    color: black;
+} 
+input, #category{
+    width: 49%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: medium;
+    color: black;
+}
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: medium;
+    color: black;
+    resize: vertical;
+}
+#categoryy, #capacityy, #statuss{
+    width: 32%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: medium;
+    color: black;
+}
+label[for="capacityy"]{
+    margin-left: 98px;
+}
+label[for="statuss"]{
+    margin-left: 98px;
+}
+#error-message{
+    color: red;
+    font-weight: bold;
+}

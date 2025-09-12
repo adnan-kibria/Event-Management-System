@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcement</title>
     <link rel="stylesheet" href="../css/across-style.css">
+    <link rel="stylesheet" href="../css/announcement.css">
 </head>
 <body>
     <div class="side-nav">
@@ -65,6 +66,57 @@
                 </div>
             </div>
         </div>
+        <div class="main-content">
+            <div class="fixed-content">
+                <div class="header-section">
+                    <h2>Announcements</h2>
+                    <button id="add-announcement-btn">Add Announcement</button>
+                </div>
+                <hr>
+                <div class="table-container">
+                    <table id="announcement-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Announcement Title</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="announcement-data">                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-one" id="add-announcement-modal">
+                <div class="modal-content-one" id="detail-content-one">
+                    <h2>Add Announcement</h2>
+                    <hr>
+                    <div class="details-container" id="details-container">
+                        <form action="../php/add-announce.php" method="POST" id="add-announcement-form">
+                            <label for="announce-title">Announcement Title</label><br>
+                            <input type="text" id="announce-title" name="announce-title"><br>
+
+                            <label for="body">Body</label><br>
+                            <textarea id="body" name="body" rows="10" cols="66"></textarea><br>
+
+                            <span id="error-message"></span><br>
+
+                            <button type="submit">Add</button>
+                            <button type="button" id="close-add-modal">Cancel</button>
+                        </form>
+                    </div>
+                </div>      
+            </div>
+            <div class="modal-two" id="show-announcement-modal">
+                <div class="modal-content-two" id="detail-content-two">
+                    <div class="details-container" id="details-container">
+                        
+                    </div>
+                </div>      
+            </div>
+        </div>  
     </div>
+    <script src="../js/add-announce.js"></script>
+    <script src="../js/announce.js"></script>
 </body>
 </html>
