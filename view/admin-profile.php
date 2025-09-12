@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="../css/across-style.css">
-    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link rel="stylesheet" href="../css/admin-profile.css">
 </head>
 <body>
     <div class="side-nav">
@@ -61,7 +61,62 @@
         </div>
        </div>
        <div class="main-content">
-        
+        <div class="container">
+            <div class="heading">
+                <h2>Profile</h2>
+            </div>
+            <div class="tbody">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" id="name" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" id="username" name="username" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" id="email" name="email" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td><input type="text" id="phone-no" name="phone-noe"></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td><input type="date" name="dob" id="dob"></td>
+                    </tr>
+                    <tr>
+                        <td>NID Number</td>
+                        <td><input type="text" name="nid" id="nid"></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><textarea name="address" id="address" rows="2" cols="30"></textarea></td>
+                    </tr>
+                </table>
+                <button id="changes">Make Change</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="heading">
+                <h2>Security</h2>
+            </div>
+            <div class="tbody">
+                <table>
+                    <tr>
+                        <td>New Password</td>
+                        <td><input type="password" name="newpass" id="newpass"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Pass</td>
+                        <td><input type="password" name="confirmpass" id="confirmpass"></td>
+                    </tr>
+                </table>
+                <button id="update">Update</button>
+            </div>
+        </div>
        </div>
     </div>
     <script src="../js/admin-profile.js"></script>
