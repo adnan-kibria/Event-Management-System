@@ -1,27 +1,83 @@
 <?php
     include "../db/festivio-db.php";
 
-    if(isset($_POST['event-id']) && isset($_POST['event-title']) && isset($_POST['description']) && isset($_POST['start-date']) && isset($_POST['end-date']) && isset($_POST['venue']) && isset($_POST['category']) && isset($_POST['capacity']) && isset($_POST['status'])){
-        $eventID = $_POST['event-id'];
-        $eventTitle = $_POST['event-title'];
-        $eventDescription = $_POST['description'];
-        $startDate = $_POST['start-date'];
-        $endDate = $_POST['end-date'];
-        $venue = $_POST['venue'];
-        $category = $_POST['category'];
-        $capacity = $_POST['capacity'];
-        $status = $_POST['status'];
+    header('Content-Type: application/json');
 
-        $sql = "UPDATE events SET event_title = ?, event_description = ?, start_date = ?, end_date = ?, venue = ?, category = ?, capacity = ?, status = ? WHERE event_id = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssssssi", $eventTitle, $eventDescription, $startDate, $endDate, $venue, $category, $capacity, $status, $eventID);
-        $result = $stmt->execute();
-        if($result){
-            echo json_encode(["success" => true]);
-            exit();
-        }  
-        $stmt->close();
+    if(isset($_POST['event-id'])) {
+        $eventID = $_POST['event-id'];
+        $updates = [];
+        $params = [];
+        $types = "";
+
+        if(isset($_POST['event-title'])) {
+            $updates[] = "event_title = ?";
+            $params[] = $_POST['event-title'];
+            $types .= "s";
+        }
+        if(isset($_POST['description'])) {
+            $updates[] = "event_description = ?";
+            $params[] = $_POST['description'];
+            $types .= "s";
+        }
+        if(isset($_POST['start-date'])) {
+            $updates[] = "start_date = ?";
+            $params[] = $_POST['start-date'];
+            $types .= "s";
+        }
+        if(isset($_POST['end-date'])) {
+            $updates[] = "end_date = ?";
+            $params[] = $_POST['end-date'];
+            $types .= "s";
+        }
+        if(isset($_POST['venue'])) {
+            $updates[] = "venue = ?";
+            $params[] = $_POST['venue'];
+            $types .= "s";
+        }
+        if(isset($_POST['category'])) {
+            $updates[] = "category = ?";
+            $params[] = $_POST['category'];
+            $types .= "s";
+        }
+        if(isset($_POST['capacity'])) {
+            $updates[] = "capacity = ?";
+            $params[] = $_POST['capacity'];
+            $types .= "i";
+        }
+        if(isset($_POST['status'])) {
+            $updates[] = "status = ?";
+            $params[] = $_POST['status'];
+            $types .= "s";
+        }
+
+        if(!empty($updates)) {
+            $sql = "UPDATE events SET " . implode(", ", $updates) . " WHERE event_id = ?";
+            $params[] = $eventID;
+            $types .= "i";
+
+            $stmt = $conn->prepare($sql);
+
+            if ($stmt === false) {
+                echo json_encode(["success" => false, "error" => $conn->error]);
+                exit();
+            }
+
+            $stmt->bind_param($types, ...$params);
+            $result = $stmt->execute();
+            
+            if($result) {
+                echo json_encode(["success" => true]);
+            } else {
+                echo json_encode(["success" => false, "error" => $stmt->error]);
+            }
+
+            $stmt->close();
+        } else {
+            echo json_encode(["success" => false, "error" => "No fields to update."]);
+        }
+    } else {
+        echo json_encode(["success" => false, "error" => "Event ID not provided."]);
     }
-    echo json_encode(["success" => false]);
-    $conn
+
+    $conn->close();
 ?>

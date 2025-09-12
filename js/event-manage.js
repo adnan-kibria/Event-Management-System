@@ -60,22 +60,21 @@ document.addEventListener("DOMContentLoaded", function(){
         detailContent.innerHTML = `
             <h2>Event Details</h2>
             <hr>
-            <form action="../php/update-event.php" method="POST" id="update-form">
             <label for="event-id"><strong>Event ID</strong></label><br>
             <input type="text" id="event-id" value="${event.event_id}" disabled><br>
             <label for="event-title"><strong>Event Title</strong></label><br>
             <input type="text" id="event-title" value="${event.event_title}"><br>
             <label for="description"><strong>Description</strong></label><br>
-            <textarea id="description" rows="10" cols="66">${event.event_description}</textarea><br>
+            <textarea id="event-description" rows="10" cols="66">${event.event_description}</textarea><br>
             <label for="start-date"><strong>Start Date</strong></label>
             <label for="end-date"><strong>End Date</strong></label><br>
             <input type="date" id="start-date" value="${event.start_date}">
             <input type="date" id="end-date" value="${event.end_date}"><br>
             <label for="venue"><strong>Venue</strong></label><br>
             <input type="text" id="venue" value="${event.venue}"><br>
-            <label for="category"><strong>Category</strong></label>
-            <label for="capacity"><strong>Capacity</strong></label>
-            <label for="status"><strong>Status</strong></label><br>
+            <label for="categoryy"><strong>Category</strong></label>
+            <label for="capacityy"><strong>Capacity</strong></label>
+            <label for="statuss"><strong>Status</strong></label><br>
             <select id="categoryy">
                 <option value="Music" ${event.category === "Music" ? "selected" : ""}>Music</option>
                 <option value="Art" ${event.category === "Art" ? "selected" : ""}>Art</option>
@@ -90,8 +89,7 @@ document.addEventListener("DOMContentLoaded", function(){
             </select><br>
             <button id="update-btn" class="update-btn">Update</button>
             <button id="delete-btn" class="delete-btn">Delete</button>
-            <button id="close-btn" class="close-btn">Close</button>
-            </form>`;
+            <button id="close-btn" class="close-btn">Close</button>`;
 
         function updateEvent(eventID, updatedData){
             var xhr = new XMLHttpRequest();
@@ -108,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     }
                 }
             };
+            console.log(updatedData);
             xhr.send("event-id=" + eventID + "&" + new URLSearchParams(updatedData).toString());
         }
 
@@ -129,17 +128,17 @@ document.addEventListener("DOMContentLoaded", function(){
         xhr.send("event-id=" + eventID);
     }
 
-        const updateBtn = document.getElementById("update-btn");
-        updateBtn.addEventListener("click", () =>{
+        const updateBtn = document.querySelector("#update-btn");
+        updateBtn.addEventListener("click", () => {
             var updatedData = {
-                'event-title': document.getElementById("event-title").value,
-                'description': document.getElementById("description").value,
-                'start-date': document.getElementById("start-date").value,
-                'end-date': document.getElementById("end-date").value,
-                'venue': document.getElementById("venue").value,
-                'category': document.getElementById("category").value,
-                'capacity': document.getElementById("capacity").value,
-                'status': document.getElementById("status").value
+                'event-title': modal_two.querySelector("#event-title").value,
+                'description': modal_two.querySelector("#event-description").value,
+                'start-date': modal_two.querySelector("#start-date").value,
+                'end-date': modal_two.querySelector("#end-date").value,
+                'venue': modal_two.querySelector("#venue").value,
+                'category': modal_two.querySelector("#categoryy").value,
+                'capacity': modal_two.querySelector("#capacityy").value,
+                'status': modal_two.querySelector("#statuss").value
             };
             updateEvent(eventID, updatedData);
         });

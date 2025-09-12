@@ -25,7 +25,7 @@
         else{
             $sql = "INSERT INTO events (event_title, event_description, start_date, end_date, venue, category, capacity, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssssssi", $event_title, $description, $start_date, $end_date, $venue, $category, $capacity, $status);
+            $stmt->bind_param("ssssssis", $event_title, $description, $start_date, $end_date, $venue, $category, $capacity, $status);
 
             if($stmt->execute() === TRUE){
                 echo "New record created successfully";
