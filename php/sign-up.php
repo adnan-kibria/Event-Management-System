@@ -36,6 +36,7 @@
 
             if($stmt->execute() === TRUE){
                 echo "New record created successfully";
+                header("Location: ../view/sign-up-sign-in.php");
             }
             else{
                 echo "Error: " .$stmt->error;

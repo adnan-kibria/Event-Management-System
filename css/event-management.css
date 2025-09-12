@@ -4,8 +4,20 @@
     padding: 10px;
     border-radius: 5px;
 }
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .main .main-content h2{
     color: #FF512F;
+    margin-top: 10px;
+}
+.main .main-content button{
+    background-color: #FF512F;
+    color: white;
+    width: 100px;
+    height: auto; 
     margin-top: 10px;
 }
 .main .main-content hr{
@@ -58,7 +70,7 @@
     background-color: #DD2476;
     cursor: pointer;
 }
-.modal{
+.modal-one, .modal-two{
     display: none;
     position: fixed;
     top: 0;
@@ -70,25 +82,35 @@
     align-items: center;
     z-index: 2000;
 }
-.modal-content{
+.modal-content-one, .modal-content-two{
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     width: 90%;
     max-width: 600px;
+    max-height: 600px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative;
+    overflow: auto;
 }
-label[for="user-username"]{
-    margin-left: 188px;
+label[for="end-date"]{
+    margin-left: 170px;
 }
-label[for="user-phone"]{
-    margin-left: 226px;
+label[for="capacity"]{
+    margin-left: 190px;
 }
-label[for="user-dob"]{
-    margin-left: 218px;
-}
-input{
+#event-title,#venue{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: medium;
+    color: black;
+} 
+input, #category{
     width: 49%;
     padding: 10px;
     margin-top: 10px;
@@ -99,13 +121,36 @@ input{
     font-size: medium;
     color: black;
 }
-#close-btn{
-    background-color: #FF512F;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    float: right;
+    box-sizing: border-box;
+    font-size: medium;
+    color: black;
+    resize: vertical;
+}
+#categoryy, #capacityy, #statuss{
+    width: 32%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: medium;
+    color: black;
+}
+label[for="capacityy"]{
+    margin-left: 98px;
+}
+label[for="statuss"]{
+    margin-left: 98px;
+}
+#error-message{
+    color: red;
+    font-weight: bold;
 }

@@ -5,37 +5,33 @@
         header("Location: ../view/sign-up-sign-in.php");
         exit();
     }
-
-    if($_SESSION["role"] !== "admin"){
-        header("Location: ../view/participant-dashboard.php");
-        exit();
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcement</title>
+    <title>User Management</title>
     <link rel="stylesheet" href="../css/across-style.css">
+    <link rel="stylesheet" href="../css/user-management.css">
 </head>
 <body>
     <div class="side-nav">
         <div class="top-section">
-            <h2>Announcement</h2>
+            <h2>User Management</h2>
             <hr>
             <ul>
                 <li><a href="./admin-dashboard.php">Home</a></li>
                 <li><a class="active" href="./user-management.php">User Management</a></li>
                 <li><a href="./event-management.php">Event Management</a></li>
-                <li><a href="./reg-management.php">Ticket Management</a></li>
+                <li><a href="./reg-management.php">Registration Management</a></li>
                 <li><a href="./event-report.php">Event Report</a></li>
                 <li><a href="./announcement.php">Announcement</a></li>
             </ul>
         </div>
         <div class="bottom-section">
             <hr>
-            <button onclick="location.href='../php/logout.php'">Logout</button>
+            <button onclick="location.href='../php/sign-out.php'">Sign out</button>
         </div>
     </div>
     <div class="main">
@@ -65,6 +61,36 @@
                 </div>
             </div>
         </div>
+        <div class="main-content">
+            <div class="fixed-content">
+                <h2>Participant</h2>
+                <hr>
+                <div class="table-container">
+                    <table id="user-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th colspan="2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-data">                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal">
+                <div class="modal-content" id="detail-content">
+                    <div class="details-container" id="details-container">
+                        
+                    </div>
+                </div>      
+            </div>
+        </div>
     </div>
+    <script src="../js/user-manage.js"></script>
 </body>
 </html>
