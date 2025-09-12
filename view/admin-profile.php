@@ -69,7 +69,7 @@
                 <table>
                     <tr>
                         <td>Name</td>
-                        <td><input type="text" id="name" name="name"></td>
+                        <td><input type="text" id="full-name" name="name"></td>
                     </tr>
                     <tr>
                         <td>Username</td>
@@ -81,7 +81,7 @@
                     </tr>
                     <tr>
                         <td>Phone Number</td>
-                        <td><input type="text" id="phone-no" name="phone-noe"></td>
+                        <td><input type="text" id="phone-no" name="phone-no"></td>
                     </tr>
                     <tr>
                         <td>Date of Birth</td>
