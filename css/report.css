@@ -3,13 +3,25 @@
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
+    height: 470px;
+}
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .main .main-content h2{
     color: #FF512F;
 }
+.main .main-content button{
+    background-color: #FF512F;
+    color: white;
+    width: 100px;
+    height: auto; 
+}
 .main .main-content hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: 1px solid #FF512F;
 }
 .main .main-content .table-container{
@@ -47,13 +59,23 @@
 .main .main-content table tr .btn{
     text-align: center;
 }
-.main .main-content table tr td button{
+#download-btn{
+    float: right;
+}
+#report-type{
+    width: 100px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #FF512F;
+    background-color: white;
+    color: #FF512F;
+    font-weight: bold;
+}
+#report-type:hover{
     background-color: #FF512F;
     color: white;
-    width: 80px;
-    height: auto; 
-}
-.main .main-content table tr td button:hover{
-    background-color: #DD2476;
     cursor: pointer;
+}
+#report-type:focus{
+    outline: none;
 }

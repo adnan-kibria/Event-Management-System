@@ -11,18 +11,19 @@
 }
 .main .main-content h2{
     color: #FF512F;
-    margin-top: 10px;
+}
+#add-announcement-btn{
+    width: 160px;
 }
 .main .main-content button{
     background-color: #FF512F;
     color: white;
-    width: 200px;
+    width: 80px;
     height: auto; 
-    margin-top: 10px;
 }
 .main .main-content hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: 1px solid #FF512F;
 }
 .main .main-content .table-container{
@@ -64,7 +65,6 @@
     background-color: #FF512F;
     color: white;
     width: 80px;
-    height: auto; 
 }
 .main .main-content table tr td button:hover{
     background-color: #DD2476;
@@ -110,7 +110,7 @@ label[for="capacity"]{
     font-size: medium;
     color: black;
 } 
-input, #category{
+.main-content input, #category{
     width: 49%;
     padding: 10px;
     margin-top: 10px;
