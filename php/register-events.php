@@ -1,5 +1,5 @@
 <?php
- include"../db/festivio-db.php";
+ include "../db/festivio-db.php";
  session_start();
   $participent_id = $_SESSION['participent_id'] ?? 2;
    $message = $_SESSION['msg'] ?? '';
@@ -26,7 +26,7 @@
                     </tr>";
                 }
             } else {
-                echo "<tr><td colspan='5'>No registrations found</td></tr>";
+                echo "<tr><td colspan='9'>No registrations found</td></tr>";
             }
         
     ?>

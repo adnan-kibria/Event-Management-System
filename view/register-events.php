@@ -16,7 +16,7 @@
         <div class = "nav-links">
             <a href="./user-dashboard.php">Home</a>
             <a href="./browse-events.php">Browse Events</a>
-            <a href="./register-events.php" class="active">Registere Events</a>
+            <a href="./register-events.php" class="active">Register Events</a>
             <a href="./profile.php">Profile</a>
         </div>
         <div class="search">

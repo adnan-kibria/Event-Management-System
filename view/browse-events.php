@@ -14,7 +14,7 @@
         <div class = "nav-links">
             <a href="./user-dashboard.php">Home</a>
             <a href="./browse-events.php" class="active">Browse Events</a>
-            <a href="./register-events.php">Registere Events</a>
+            <a href="./register-events.php">Register Events</a>
             <a href="./profile.php">Profile</a>
         </div>
         <div class="search">
@@ -45,7 +45,7 @@
     </div>
         </table>
 
-    <script src="../js/user-dashboard.js"></script>
+    
 </body>
 </html>
 
