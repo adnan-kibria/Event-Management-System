@@ -16,7 +16,7 @@
                 <input type="password" id="password-sign-in" name="password-sign-in" placeholder="Password">
                 <span id="sign-in-password-error" class="error-message"></span>
                 <div class="remember-me">
-                    <input type="checkbox" id="remember-me" name="remember_me">
+                    <input type="checkbox" id="remember-me" name="remember-me">
                     <label for="remember-me">Remember Me</label>
                 </div>
                 <div class="forget-password">

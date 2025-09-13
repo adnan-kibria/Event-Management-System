@@ -25,7 +25,7 @@
             if($_SESSION["role"] === "admin"){
                 header("Location: ../view/admin-dashboard.php");
             } else {
-                header("Location: ../view/participant-dashboard.php");
+                header("Location: ../view/user-dashboard.php");
             }
             exit();
         }
@@ -80,7 +80,7 @@
                     if($_SESSION["role"] === "admin"){
                         header("Location: ../view/admin-dashboard.php");
                     } else {
-                        header("Location: ../view/participant-dashboard.php");
+                        header("Location: ../view/user-dashboard.php");
                     }
                     exit();
                 } else {
