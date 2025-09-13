@@ -1,0 +1,93 @@
+Folder PATH listing
+Volume serial number is B600-7456
+C:.
+|   .gitattributes
+|   project_structure.txt
+|   README.md
+|   
++---css
+|       across-style.css
+|       admin-dashboard.css
+|       admin-profile.css
+|       announcement.css
+|       browse-events.css
+|       event-management.css
+|       forget.css
+|       homepage-style.css
+|       homepage1-style.css
+|       reg.css
+|       report.css
+|       sign-up-sign-in.css
+|       user-dashboard.css
+|       user-management.css
+|       user-profile.css
+|       
++---db
+|       admin-data.php
+|       festivio-db.php
+|       
++---images
+|       admin-dp.jpg
+|       hero-sec.jpg
+|       toggle-bg.jpg
+|       
++---js
+|       add-announce.js
+|       add-event-v.js
+|       admin-dashboard.js
+|       admin-profile.js
+|       announce.js
+|       event-manage.js
+|       forget.js
+|       profile.js
+|       reg.js
+|       report.js
+|       sign-up-sign-in.js
+|       user-manage.js
+|       
++---php
+|       add-announce.php
+|       add-event.php
+|       admin-data.php
+|       adminDashboard.php
+|       announce.php
+|       browse-events.php
+|       change-admin-info.php
+|       change-user-info.php
+|       check-auth.php
+|       delete-announce.php
+|       delete-event.php
+|       delete-user.php
+|       dummy-reg.php
+|       event-manage.php
+|       forget-pass.php
+|       get-reg-data.php
+|       register-events.php
+|       report-data.php
+|       sign-in.php
+|       sign-out.php
+|       sign-up.php
+|       update-admin-pass.php
+|       update-announce.php
+|       update-event.php
+|       update-reg-data.php
+|       user-data.php
+|       user-manage.php
+|       userDashboard.php
+|       
+\---view
+        admin-dashboard.php
+        admin-profile.php
+        announcement.php
+        browse-events.php
+        event-management.php
+        event-report.php
+        forget-pass.php
+        homepage.php
+        profile.php
+        reg-management.php
+        register-events.php
+        sign-up-sign-in.php
+        user-dashboard.php
+        user-management.php
+        
