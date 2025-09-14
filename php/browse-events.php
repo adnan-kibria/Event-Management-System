@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
                 <td>" . $row['capacity'] . "</td>
                 <td>" . htmlspecialchars($row['status']) . "</td>
                 <td>
-                    <form method='POST' action='../view/register-events.php'>
+                    <form method='POST' action='../php/register-events.php'>
                         <input type='hidden' name='event_id' value='" . $row['event_id'] . "'>
                         <button type='submit' class='register-button'>Register</button>
                     </form>

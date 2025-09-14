@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="../css/user-dashboard.css">
     <link rel="stylesheet" href="../css/browse-events.css">
     
-   
-    
 
 </head>
 <body>
