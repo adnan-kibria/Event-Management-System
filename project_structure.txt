@@ -6,88 +6,84 @@ C:.
 |   README.md
 |   
 +---css
-|       across-style.css
-|       admin-dashboard.css
-|       admin-profile.css
-|       announcement.css
-|       browse-events.css
-|       event-management.css
-|       forget.css
-|       homepage-style.css
-|       homepage1-style.css
-|       reg.css
-|       report.css
-|       sign-up-sign-in.css
-|       user-dashboard.css
-|       user-management.css
-|       user-profile.css
+|       across-style.css [general style for admin panel]
+|       admin-dashboard.css [admin]
+|       admin-profile.css [admin]
+|       announcement.css [admin]
+|       browse-events.css [participants]
+|       event-management.css [admin]
+|       forget.css [general]
+|       homepage-style.css [general]
+|       homepage1-style.css [participants]
+|       reg.css [admin]
+|       sign-up-sign-in.css [general]
+|       user-dashboard.css [participants]
+|       user-management.css [admin]
+|       user-profile.css [participants]
 |       
 +---db
-|       admin-data.php
-|       festivio-db.php
+|       admin-data.php [admin]
+|       festivio-db.php [general]
 |       
 +---images
-|       admin-dp.jpg
-|       hero-sec.jpg
-|       toggle-bg.jpg
+|       admin-dp.jpg [admin]
+|       hero-sec.jpg [general]
+|       toggle-bg.jpg [general]
 |       
 +---js
-|       add-announce.js
-|       add-event-v.js
-|       admin-dashboard.js
-|       admin-profile.js
-|       announce.js
-|       event-manage.js
-|       forget.js
-|       profile.js
-|       reg.js
-|       report.js
-|       sign-up-sign-in.js
-|       user-manage.js
+|       add-announce.js [admin]
+|       add-event-v.js [admin]
+|       admin-dashboard.js [admin]
+|       admin-profile.js [admin]
+|       announce.js [admin]
+|       event-manage.js [admin]
+|       forget.js [admin]
+|       profile.js [participants]
+|       reg.js [admin]
+|       sign-up-sign-in.js [general]
+|       user-manage.js [admin]
 |       
 +---php
-|       add-announce.php
-|       add-event.php
-|       admin-data.php
-|       adminDashboard.php
-|       announce.php
-|       browse-events.php
-|       change-admin-info.php
-|       change-user-info.php
-|       check-auth.php
-|       delete-announce.php
-|       delete-event.php
-|       delete-user.php
-|       dummy-reg.php
-|       event-manage.php
-|       forget-pass.php
-|       get-reg-data.php
-|       register-events.php
-|       report-data.php
-|       sign-in.php
-|       sign-out.php
-|       sign-up.php
-|       update-admin-pass.php
-|       update-announce.php
-|       update-event.php
-|       update-reg-data.php
-|       user-data.php
-|       user-manage.php
-|       userDashboard.php
+|       add-announce.php [admin]
+|       add-event.php [admin]
+|       admin-data.php [admin]
+|       adminDashboard.php [admin]
+|       announce.php [admin]
+|       browse-events.php [participants]
+|       change-admin-info.php [admin]
+|       change-user-info.php [participants]
+|       check-auth.php [general]
+|       delete-announce.php [admin]
+|       delete-event.php [admin]
+|       delete-user.php [admin]
+|       dummy-reg.php [admin]
+|       event-manage.php [admin]
+|       forget-pass.php [admin]
+|       get-reg-data.php [admin]
+|       register-events.php [admin]
+|       sign-in.php [general]
+|       sign-out.php [general]
+|       sign-up.php [general]
+|       update-admin-pass.php [admin]
+|       update-announce.php [admin]
+|       update-event.php [admin]
+|       update-reg-data.php [admin]
+|       user-data.php [participants]
+|       user-manage.php [admin]
+|       userDashboard.php [admin]
 |       
 \---view
-        admin-dashboard.php
-        admin-profile.php
-        announcement.php
-        browse-events.php
-        event-management.php
-        event-report.php
-        forget-pass.php
-        homepage.php
-        profile.php
-        reg-management.php
-        register-events.php
-        sign-up-sign-in.php
-        user-dashboard.php
-        user-management.php
+        admin-dashboard.php [admin]
+        admin-profile.php [admin]
+        announcement.php [admin]
+        browse-events.php [participants]
+        event-management.php [admin]
+        forget-pass.php [admin]
+        homepage.php [general]
+        profile.php [participants]
+        reg-management.php [admin]
+        register-events.php [admin]
+        sign-up-sign-in.php [general]
+        user-dashboard.php [participants]
+        user-management.php [admin]
         
